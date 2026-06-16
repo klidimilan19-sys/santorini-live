@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff;
+  --foreground: #06243d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+::selection {
+  background: #d9f1ff;
+  color: #06243d;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full bg-aegean-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-aegean-700;
+}
+
+.page-title {
+  @apply font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-aegean-950 sm:text-5xl lg:text-6xl;
+}
+
+.card-lift {
+  @apply transition duration-300 hover:-translate-y-1 hover:shadow-card;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(22, 137, 216, 0.16) 1px, transparent 1px);
+  background-size: 22px 22px;
+}

@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+/.npm-cache
+
+# Next.js
+/.next
+/out
+tsconfig.tsbuildinfo
+
+# local environment
+.env
+.env.local
+.env.*.local
+
+# editor and system files
+.DS_Store
+*.log
+
+# local task workspace
+/work
