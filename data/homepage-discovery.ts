@@ -4,6 +4,7 @@ const village = Object.fromEntries(santoriniVillages.map((item) => [item.slug, i
 
 export type DiscoveryImage = {
   title: string;
+  href: string;
   imageUrl: string;
   imageAlt: string;
   imageCredit: string;
@@ -18,20 +19,22 @@ export type Checkpoint = DiscoveryImage & {
 };
 
 export const santoriniGallery: DiscoveryImage[] = [
-  { title: "Oia blue domes", imageUrl: village.oia.imageUrl, imageAlt: village.oia.imageAlt, imageCredit: village.oia.imageCredit },
-  { title: "Fira caldera", imageUrl: village.fira.imageUrl, imageAlt: village.fira.imageAlt, imageCredit: village.fira.imageCredit },
-  { title: "Imerovigli / Skaros Rock", imageUrl: village.imerovigli.imageUrl, imageAlt: village.imerovigli.imageAlt, imageCredit: village.imerovigli.imageCredit },
-  { title: "Kamari beach", imageUrl: village.kamari.imageUrl, imageAlt: village.kamari.imageAlt, imageCredit: village.kamari.imageCredit },
-  { title: "Perissa beach", imageUrl: village.perissa.imageUrl, imageAlt: village.perissa.imageAlt, imageCredit: village.perissa.imageCredit },
+  { title: "Oia blue domes", href: "/guide/oia", imageUrl: village.oia.imageUrl, imageAlt: village.oia.imageAlt, imageCredit: village.oia.imageCredit },
+  { title: "Fira caldera", href: "/guide/fira", imageUrl: village.fira.imageUrl, imageAlt: village.fira.imageAlt, imageCredit: village.fira.imageCredit },
+  { title: "Imerovigli / Skaros Rock", href: "/guide/imerovigli", imageUrl: village.imerovigli.imageUrl, imageAlt: village.imerovigli.imageAlt, imageCredit: village.imerovigli.imageCredit },
+  { title: "Kamari beach", href: "/guide/kamari", imageUrl: village.kamari.imageUrl, imageAlt: village.kamari.imageAlt, imageCredit: village.kamari.imageCredit },
+  { title: "Perissa beach", href: "/guide/perissa", imageUrl: village.perissa.imageUrl, imageAlt: village.perissa.imageAlt, imageCredit: village.perissa.imageCredit },
   {
     title: "Red Beach",
+    href: "/guide/akrotiri-red-beach",
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg/500px-Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg",
     imageAlt: "Red Beach volcanic cliffs and shoreline near Akrotiri in Santorini",
     imageCredit: "Wikimedia Commons: Red Beach - Panorama - Santorini - Grecia - agosto 2018.jpg",
   },
-  { title: "Pyrgos village", imageUrl: village.pyrgos.imageUrl, imageAlt: village.pyrgos.imageAlt, imageCredit: village.pyrgos.imageCredit },
+  { title: "Pyrgos village", href: "/guide/pyrgos", imageUrl: village.pyrgos.imageUrl, imageAlt: village.pyrgos.imageAlt, imageCredit: village.pyrgos.imageCredit },
   {
     title: "Sunset view",
+    href: "/guide/sunset-spots",
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Oia%20Santorini%20sunset.jpg",
     imageAlt: "Sunset over Oia and the Santorini caldera",
     imageCredit: "Wikimedia Commons: Oia Santorini sunset.jpg",
@@ -46,6 +49,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Arrive 90 minutes before sunset",
     guideHref: "/guide/villages/oia",
     title: "Oia Castle Sunset",
+    href: "/guide/oia",
     imageUrl: village.oia.imageUrl,
     imageAlt: "Oia white houses and caldera view near the castle sunset viewpoint",
     imageCredit: village.oia.imageCredit,
@@ -57,6 +61,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Morning or golden hour",
     guideHref: "/guide/villages/fira",
     title: "Three Bells of Fira",
+    href: "/guide/fira",
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Bells%20of%20Fira%2C%20Santorini.jpg",
     imageAlt: "Three Bells of Fira blue dome church overlooking the Santorini caldera",
     imageCredit: "Wikimedia Commons: Three Bells of Fira, Santorini.jpg",
@@ -68,6 +73,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Sunrise or late afternoon",
     guideHref: "/guide/villages/imerovigli",
     title: "Skaros Rock",
+    href: "/guide/imerovigli",
     imageUrl: village.imerovigli.imageUrl,
     imageAlt: village.imerovigli.imageAlt,
     imageCredit: village.imerovigli.imageCredit,
@@ -79,6 +85,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Morning, from the safe viewpoint",
     guideHref: "/guide/villages/akrotiri",
     title: "Red Beach",
+    href: "/guide/akrotiri-red-beach",
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg/500px-Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg",
     imageAlt: "Red Beach red volcanic cliffs near Akrotiri Santorini",
     imageCredit: "Wikimedia Commons: Red Beach - Panorama - Santorini - Grecia - agosto 2018.jpg",
@@ -90,6 +97,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Morning for swimming",
     guideHref: "/guide/villages/kamari",
     title: "Kamari Black Beach",
+    href: "/guide/kamari",
     imageUrl: village.kamari.imageUrl,
     imageAlt: village.kamari.imageAlt,
     imageCredit: village.kamari.imageCredit,
@@ -101,6 +109,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Late morning to afternoon",
     guideHref: "/guide/villages/perissa",
     title: "Perissa Beach",
+    href: "/guide/perissa",
     imageUrl: village.perissa.imageUrl,
     imageAlt: village.perissa.imageAlt,
     imageCredit: village.perissa.imageCredit,
@@ -112,6 +121,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Late afternoon",
     guideHref: "/guide/villages/pyrgos",
     title: "Pyrgos Village",
+    href: "/guide/pyrgos",
     imageUrl: village.pyrgos.imageUrl,
     imageAlt: village.pyrgos.imageAlt,
     imageCredit: village.pyrgos.imageCredit,
@@ -123,6 +133,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Morning or midday shade",
     guideHref: "/guide/villages/akrotiri",
     title: "Akrotiri Archaeological Site",
+    href: "/guide/akrotiri-red-beach",
     imageUrl: village.akrotiri.imageUrl,
     imageAlt: village.akrotiri.imageAlt,
     imageCredit: village.akrotiri.imageCredit,
@@ -134,6 +145,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Lunch or sunset",
     guideHref: "/guide/villages/oia",
     title: "Ammoudi Bay",
+    href: "/guide/oia",
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Ammoudi%20Bay%20Santorini.jpg",
     imageAlt: "Ammoudi Bay harbor below Oia in Santorini",
     imageCredit: "Wikimedia Commons: Ammoudi Bay Santorini.jpg",
@@ -145,6 +157,7 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Morning or early evening",
     guideHref: "/guide/villages/megalochori",
     title: "Megalochori Village",
+    href: "/guide/villages/megalochori",
     imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Megalochori%20Santorini.jpg",
     imageAlt: "Traditional old houses and village lanes in Megalochori Santorini",
     imageCredit: "Wikimedia Commons: Megalochori Santorini.jpg",

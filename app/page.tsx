@@ -97,7 +97,12 @@ export default function Home() {
         <SectionHeading eyebrow={t("Santorini gallery")} title={t("Picture your island route.")} description={t("A quick visual tour across blue domes, caldera cliffs, black beaches, red volcanic coast and traditional villages.")} />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {santoriniGallery.map((item, index) => (
-            <article key={item.title} className={`group overflow-hidden rounded-3xl border border-aegean-900/10 bg-white ${index === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""}`}>
+            <Link
+              key={item.title}
+              href={item.href}
+              aria-label={`${t("View Guide")}: ${t(item.title)}`}
+              className={`group cursor-pointer overflow-hidden rounded-3xl border border-aegean-900/10 bg-white transition hover:-translate-y-1 hover:border-aegean-300 hover:shadow-card ${index === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""}`}
+            >
               <div className={`relative ${index === 0 ? "h-80 lg:h-full" : "h-56"}`}>
                 <Image src={item.imageUrl} alt={t(item.imageAlt)} fill className="object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-aegean-950/70 via-transparent to-transparent" />
@@ -106,7 +111,7 @@ export default function Home() {
                   <p className="mt-1 text-[11px] text-white/60">{t("Image")}: {item.imageCredit}</p>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
