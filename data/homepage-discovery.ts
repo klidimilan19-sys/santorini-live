@@ -25,9 +25,9 @@ export const santoriniGallery: DiscoveryImage[] = [
   { title: "Perissa beach", imageUrl: village.perissa.imageUrl, imageAlt: village.perissa.imageAlt, imageCredit: village.perissa.imageCredit },
   {
     title: "Red Beach",
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Beach%20Santorini%20Greece.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg/500px-Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg",
     imageAlt: "Red Beach volcanic cliffs and shoreline near Akrotiri in Santorini",
-    imageCredit: "Wikimedia Commons: Red Beach Santorini Greece.jpg",
+    imageCredit: "Wikimedia Commons: Red Beach - Panorama - Santorini - Grecia - agosto 2018.jpg",
   },
   { title: "Pyrgos village", imageUrl: village.pyrgos.imageUrl, imageAlt: village.pyrgos.imageAlt, imageCredit: village.pyrgos.imageCredit },
   {
@@ -79,9 +79,9 @@ export const topCheckpoints: Checkpoint[] = [
     bestTime: "Morning, from the safe viewpoint",
     guideHref: "/guide/villages/akrotiri",
     title: "Red Beach",
-    imageUrl: "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Beach%20Santorini%20Greece.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg/500px-Red_Beach_-_Panorama_-_Santorini_-_Grecia_-_agosto_2018.jpg",
     imageAlt: "Red Beach red volcanic cliffs near Akrotiri Santorini",
-    imageCredit: "Wikimedia Commons: Red Beach Santorini Greece.jpg",
+    imageCredit: "Wikimedia Commons: Red Beach - Panorama - Santorini - Grecia - agosto 2018.jpg",
   },
   {
     name: "Kamari Black Beach",
