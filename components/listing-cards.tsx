@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { BriefcaseBusiness, Check, Clock3, ExternalLink, Heart, House, MapPin, Navigation, Phone, Star, Utensils } from "lucide-react";
 import type { Job, Rental, Restaurant } from "@/data/mock-data";
 
@@ -34,9 +33,9 @@ export function JobCard({ job }: { job: Job }) {
         <p className="font-bold text-aegean-700">{job.salary}</p>
         <p className="flex items-center gap-1 text-xs text-aegean-950/40"><Clock3 size={13} />{job.posted}</p>
       </div>
-      <Link href={`/workers/submit?job=${job.id}`} className="mt-4 flex min-h-11 items-center justify-center rounded-xl bg-aegean-950 px-4 text-sm font-bold text-white hover:bg-aegean-700">
-        Apply for this job
-      </Link>
+      <a href={job.contact.includes("@") ? `mailto:${job.contact}` : `tel:${job.contact.replace(/\s/g, "")}`} className="mt-4 flex min-h-11 items-center justify-center rounded-xl bg-aegean-950 px-4 text-sm font-bold text-white hover:bg-aegean-700">
+        Contact employer
+      </a>
     </article>
   );
 }

@@ -11,7 +11,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/guide", label: "Guide" },
   { href: "/jobs", label: "Jobs" },
-  { href: "/workers", label: "Workers" },
+  { href: "/find-staff", label: "Find Staff" },
   { href: "/restaurants", label: "Restaurants" },
   { href: "/rentals", label: "Rentals" },
   { href: "/marketplace", label: "Marketplace" },

@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function LegacyJobPricingPage() {
-  redirect("/advertise");
+  redirect("/find-staff");
 }

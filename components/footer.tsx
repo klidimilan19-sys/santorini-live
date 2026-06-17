@@ -24,7 +24,7 @@ export function Footer() {
             <Link href="/guide" className="hover:text-white">Santorini Guide</Link>
             <Link href="/guide/trip-planner" className="hover:text-white">AI Trip Planner</Link>
             <Link href="/jobs" className="hover:text-white">Find a job</Link>
-            <Link href="/workers" className="hover:text-white">Workers looking for work</Link>
+            <Link href="/find-staff" className="hover:text-white">Find Staff</Link>
             <Link href="/restaurants" className="hover:text-white">Where to eat</Link>
             <Link href="/rentals" className="hover:text-white">Find a home</Link>
             <Link href="/marketplace" className="hover:text-white">Island marketplace</Link>

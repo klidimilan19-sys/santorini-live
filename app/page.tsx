@@ -33,7 +33,7 @@ const quickCategories = [
   { title: "Rentals", href: "/rentals", icon: CarFront, color: "bg-violet-50 text-violet-700" },
   { title: "Guide", href: "/guide", icon: Compass, color: "bg-emerald-50 text-emerald-700" },
   { title: "Live Updates", href: "/live", icon: CloudSun, color: "bg-amber-50 text-amber-700" },
-  { title: "Jobs & Staff", href: "/jobs", icon: BriefcaseBusiness, color: "bg-sand text-aegean-700" },
+  { title: "Jobs", href: "/jobs", icon: BriefcaseBusiness, color: "bg-sand text-aegean-700" },
 ];
 
 const todayCards = [
