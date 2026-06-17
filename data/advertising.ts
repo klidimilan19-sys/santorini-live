@@ -1,11 +1,11 @@
 export const advertisingPackages = [
-  { id: "job-basic", name: "Job post", price: 5, billing: "one-time", category: "Job", description: "Employer job advertisement. Free for workers to browse and apply." },
-  { id: "job-featured", name: "Featured job post", price: 10, billing: "one-time", category: "Job", description: "Employer job ad with priority placement. Workers still apply free." },
-  { id: "job-homepage", name: "Featured + Homepage", price: 15, billing: "one-time", category: "Job", description: "Employer vacancy promoted with homepage visibility." },
-  { id: "marketplace-basic", name: "Marketplace listing", price: 2, billing: "one-time", category: "Marketplace", description: "Standard local marketplace listing." },
-  { id: "marketplace-featured", name: "Featured marketplace listing", price: 5, billing: "one-time", category: "Marketplace", description: "Highlighted marketplace listing." },
-  { id: "business-monthly", name: "Business listing", price: 10, billing: "month", category: "Other", description: "Restaurant, rental or local business profile." },
-  { id: "homepage-banner", name: "Homepage banner", price: 25, billing: "month", category: "Other", description: "Prominent promotional banner on the homepage." },
+  { id: "basic-listing", name: "Basic Listing", price: 10, billing: "month", category: "Other", description: "Monthly business listing for hotels, restaurants, rentals, shops and local services." },
+  { id: "featured-listing", name: "Featured Listing", price: 25, billing: "month", category: "Other", description: "Monthly featured placement with stronger visibility in relevant sections." },
+  { id: "homepage-featured", name: "Homepage Featured", price: 50, billing: "month", category: "Other", description: "Monthly homepage feature for high-priority campaigns." },
+  { id: "premium-banner", name: "Premium Banner", price: 75, billing: "month", category: "Other", description: "Monthly premium banner placement for maximum visibility." },
+  { id: "job-basic", name: "Job Post", price: 5, billing: "one-time", category: "Job", description: "Employer job advertisement. Free for workers to browse and apply." },
+  { id: "job-featured", name: "Featured Job Post", price: 10, billing: "one-time", category: "Job", description: "Employer job ad with priority placement. Workers still apply free." },
+  { id: "job-section-featured", name: "Featured + Jobs Section", price: 15, billing: "one-time", category: "Job", description: "Employer vacancy promoted at the top of the jobs section." },
 ] as const;
 
 export type AdvertisingPackageId = (typeof advertisingPackages)[number]["id"];

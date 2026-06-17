@@ -1,0 +1,19 @@
+import type { Metadata } from "next";
+import { PaymentSuccess } from "@/components/payment-success";
+
+export const metadata: Metadata = { title: "Payment Successful" };
+
+export default async function PaymentSuccessPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ requestId?: string; session_id?: string }>;
+}) {
+  const { requestId, session_id: sessionId } = await searchParams;
+  return (
+    <section className="min-h-[70vh] bg-sand py-16">
+      <div className="mx-auto max-w-2xl px-5">
+        <PaymentSuccess requestId={requestId} sessionId={sessionId} />
+      </div>
+    </section>
+  );
+}

@@ -3,6 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { LanguageProvider } from "@/components/language-provider";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -21,12 +22,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="el">
       <body className={`${inter.variable} ${manrope.variable} antialiased`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <LanguageProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </LanguageProvider>
       </body>
     </html>
   );

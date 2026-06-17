@@ -1,13 +1,5 @@
-import { NextResponse } from "next/server";
-import { stripeConfig } from "@/lib/stripe-checkout";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST() {
-  if (!stripeConfig.webhookSecret) {
-    return NextResponse.json(
-      { configured: false, message: "Set STRIPE_WEBHOOK_SECRET before enabling real webhook processing." },
-      { status: 501 },
-    );
-  }
-
-  return NextResponse.json({ configured: true, message: "Replace mock handler with Stripe signature verification and request payment updates." });
+export async function POST(request: NextRequest) {
+  return NextResponse.redirect(new URL("/api/stripe-webhook", request.url), 307);
 }

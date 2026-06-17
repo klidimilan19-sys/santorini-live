@@ -1,5 +1,5 @@
 export type RequestCategory = "Job" | "Marketplace" | "Restaurant" | "Rental" | "Event" | "Other";
-export type RequestStatus = "Payment Pending" | "Paid / Pending Admin Review" | "Published" | "Rejected";
+export type RequestStatus = "Pending Payment" | "Paid / Pending Admin Review" | "Published" | "Rejected";
 export type PaymentStatus = "Unpaid" | "Paid" | "Refunded";
 
 export type SubmissionRequest = {
@@ -17,6 +17,7 @@ export type SubmissionRequest = {
   amount: number;
   paymentStatus: PaymentStatus;
   status: RequestStatus;
+  stripeSessionId?: string;
   createdAt: string;
   lastUpdated: string;
 };
@@ -63,7 +64,7 @@ export const requestRepository = {
       ...input,
       id: crypto.randomUUID(),
       paymentStatus: "Unpaid",
-      status: "Payment Pending",
+      status: "Pending Payment",
       createdAt: now,
       lastUpdated: now,
     };
@@ -75,6 +76,21 @@ export const requestRepository = {
     if (!request) return undefined;
     request.paymentStatus = "Paid";
     request.status = "Paid / Pending Admin Review";
+    request.lastUpdated = new Date().toISOString();
+    return { ...request };
+  },
+  markPaidByStripeSession(sessionId: string) {
+    const request = store.find((item) => item.stripeSessionId === sessionId);
+    if (!request) return undefined;
+    request.paymentStatus = "Paid";
+    request.status = "Paid / Pending Admin Review";
+    request.lastUpdated = new Date().toISOString();
+    return { ...request };
+  },
+  setStripeSession(id: string, stripeSessionId: string) {
+    const request = store.find((item) => item.id === id);
+    if (!request) return undefined;
+    request.stripeSessionId = stripeSessionId;
     request.lastUpdated = new Date().toISOString();
     return { ...request };
   },
