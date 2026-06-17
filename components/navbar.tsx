@@ -11,7 +11,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/guide", label: "Guide" },
   { href: "/jobs", label: "Jobs" },
-  { href: "/find-staff", label: "Find Staff" },
+  { href: "/find-staff", label: "Staff" },
   { href: "/restaurants", label: "Restaurants" },
   { href: "/rentals", label: "Rentals" },
   { href: "/marketplace", label: "Marketplace" },
@@ -43,14 +43,14 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="ml-8 hidden items-center gap-5 lg:flex xl:ml-10">
+        <nav className="ml-8 hidden items-center gap-4 lg:flex xl:ml-10">
           {links.map((link) => {
             const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-semibold transition hover:text-aegean-600 ${
+                className={`whitespace-nowrap text-sm font-semibold transition hover:text-aegean-600 ${
                   active ? "text-aegean-600" : "text-aegean-950/65"
                 }`}
               >
@@ -102,7 +102,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-xl px-4 py-3.5 font-semibold ${
+                className={`whitespace-nowrap rounded-xl px-4 py-3.5 font-semibold ${
                   (link.href === "/" ? pathname === "/" : pathname.startsWith(link.href))
                     ? "bg-aegean-50 text-aegean-700"
                     : "text-aegean-950/70"
