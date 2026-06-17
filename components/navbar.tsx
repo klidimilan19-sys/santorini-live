@@ -43,7 +43,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex">
+        <nav className="ml-8 hidden items-center gap-5 lg:flex xl:ml-10">
           {links.map((link) => {
             const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
             return (
